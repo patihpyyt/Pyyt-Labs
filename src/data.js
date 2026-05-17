@@ -134,8 +134,8 @@ export const listTools = [
   },
 ];
 
-import Proyek1 from "/assets/proyek/proyek1.webp";
-import Proyek2 from "/assets/proyek/proyek2.webp";
+import Proyek1 from "/assets/proyek/servis.webp";
+import Proyek2 from "/assets/proyek/py.webp";
 import Proyek3 from "/assets/proyek/proyek3.webp";
 import Proyek4 from "/assets/proyek/proyek4.webp";
 import Proyek5 from "/assets/proyek/proyek5.webp";
@@ -145,17 +145,19 @@ export const listProyek = [
   {
     id: 1,
     gambar: Proyek1,
-    nama: "Website Sekolah",
+    nama: "Website Service elektronik",
     desk: "Website sekolah sarana informasi digital yang menyediakan berbagai data dan aktivitas sekolah secara online. Website ini memudahkan penyampaian informasi kepada siswa, guru, orang tua, dan masyarakat secara cepat dan efisien.",
-    tools: ["HTML", "CSS", "Javascript", "AOS"],
+    tools: ["HTML", "CSS", "PHP", "database-MYSQL"],
+    link: "http://servis-hp-babel.rf.gd/?i=1",
     dad: "200",
   },
   {
     id: 2,
     gambar: Proyek2,
-    nama: "Company Profile",
+    nama: "check password and valibirity",
     desk: "Company Profile Sekolah halaman yang berisi gambaran umum tentang sekolah, meliputi identitas, visi dan misi, sejarah, fasilitas, serta prestasi sebagai media pengenalan sekolah kepada masyarakat.",
-    tools: ["HTML", "CSS", "Javascript", "AOS", "Swiper", "Lightbox Gallery"],
+    tools: ["Python"],
+     clickable: true,
     dad: "300",
   },
   {

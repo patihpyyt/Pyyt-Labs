@@ -1,9 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import DataImage from "./data";
 import { listTools, listProyek } from "./data";
 
 function App() {
-
+ const [selectedImage, setSelectedImage] = useState(null);
   useEffect(() => {
     const handleMouseMove = (e) => {
       const glow = document.getElementById("cursor-glow");
@@ -100,7 +100,7 @@ function App() {
             {/* DESC */}
             <p className="text-white/80 text-lg leading-9 max-w-xl">
 
-              Gw bikin website yang bukan cuma
+              Jasa pembuatan website yang bukan cuma
               <span className="text-[#f5a623] font-semibold">
                 {" "}kelihatan keren{" "}
               </span>
@@ -134,49 +134,43 @@ function App() {
           </div>
 
           {/* RIGHT */}
-          <div className="flex justify-center lg:justify-end">
+         {/* RIGHT */}
+<div className="flex justify-center lg:justify-end">
 
-            <div className="relative w-[350px] h-[470px]">
+  <div className="relative w-[350px] h-[470px]">
 
-              {/* GLOW */}
-              <div className="absolute inset-[-3px] rounded-[28px] bg-gradient-to-br from-[#10d9a0] via-[#f5a623] to-[#ff4f75] blur-sm"></div>
+    {/* NEON BORDER (INI YANG BARU) */}
+    <div className="absolute inset-0 rounded-[28px] p-[2px] bg-gradient-to-br from-[#10d9a0] via-[#f5a623] to-[#ff4f75]">
 
-              {/* IMAGE */}
-              <img
-                src={DataImage.gwImage}
-                alt="hero"
-                className="relative z-10 w-full h-full object-cover object-top rounded-[26px] brightness-110 contrast-110 saturate-125 border border-white/10"
-              />
+      <div className="w-full h-full rounded-[26px] overflow-hidden bg-black">
 
-              {/* FLOAT */}
-              <div className="absolute -bottom-5 -left-5 z-20 bg-black border border-white/10 rounded-2xl px-6 py-4">
+        <img
+          src={DataImage.gwImage}
+          alt="hero"
+          className="w-full h-full object-cover object-top brightness-110 contrast-110 saturate-125"
+        />
 
-                <h1 className="text-4xl font-black text-[#f5a623]">
-                  45+
-                </h1>
+      </div>
 
-                <p className="text-sm text-white">
-                  Project Selesai
-                </p>
+    </div>
 
-              </div>
+    {/* FLOAT BOX KIRI */}
+    <div className="absolute -bottom-5 -left-5 z-20 bg-black border border-white/10 rounded-2xl px-6 py-4">
+      <h1 className="text-4xl font-black text-[#f5a623]">45+</h1>
+      <p className="text-sm text-white">Project Selesai</p>
+    </div>
 
-              {/* FLOAT */}
-              <div className="absolute -top-5 -right-5 z-20 bg-black border border-white/10 rounded-2xl px-5 py-3">
+    {/* FLOAT BOX KANAN */}
+    <div className="absolute -top-5 -right-5 z-20 bg-black border border-white/10 rounded-2xl px-5 py-3">
+      <h1 className="text-[#ff4f75] font-black text-lg">4+ Tahun</h1>
+      <p className="text-xs uppercase tracking-[2px] text-white/80">
+        Pengalaman
+      </p>
+    </div>
 
-                <h1 className="text-[#ff4f75] font-black text-lg">
-                  4+ Tahun
-                </h1>
+  </div>
 
-                <p className="text-xs uppercase tracking-[2px] text-white/80">
-                  Pengalaman
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
+</div>
 
         </section>
 
@@ -206,15 +200,15 @@ function App() {
             <div className="bg-[#111118] border border-white/5 rounded-2xl p-9 relative overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-[2px] before:bg-gradient-to-r before:from-[#10d9a0] before:via-[#f5a623] before:to-[#ff4f75]">
               <p className="text-6xl font-bold text-[#10d9a0] opacity-20 leading-none">"</p>
               <p className="text-white/50 leading-relaxed -mt-2 text-[15px]">
-                Hai! Gw <span className="text-white font-medium">Muhammad Iqbal Patih</span> — <span className="text-white font-medium">Full Stack Web Developer</span> sekaligus <span className="text-white font-medium">UI/UX Designer</span>. Gw percaya desain yang bagus dan kode yang solid harus selalu jalan bareng.
+                Hai! Saya <span className="text-white font-medium">Muhammad Iqbal Patih</span> — <span className="text-white font-medium">Full Stack Web Developer</span> sekaligus <span className="text-white font-medium">UI/UX Designer</span>. Saya percaya desain yang bagus dan kode yang solid harus selalu jalan bareng.
                 <br /><br />
-                Setiap piksel dan setiap baris kode punya tujuan. Gw suka detail kecil yang bikin perbedaan besar — dari micro-interaction sampai arsitektur database.
+                Setiap piksel dan setiap baris kode punya tujuan. Saya suka detail kecil yang bikin perbedaan besar — dari micro-interaction sampai arsitektur database.
               </p>
             </div>
             <div className="flex flex-col gap-4">
               <div className="bg-[#111118] border border-white/5 rounded-xl p-5">
                 <p className="text-[11px] uppercase tracking-wider text-[#f5a623] mb-1">philosophy</p>
-                <p className="text-white/50 text-sm">"Kode yang gacor lahir dari ketekunan." — bukan sekadar quote, tapi cara gw kerja tiap hari.</p>
+                <p className="text-white/50 text-sm">"Kode yang gacor lahir dari ketekunan." — bukan sekadar quote, tapi cara saya kerja tiap hari.</p>
               </div>
               <div className="bg-[#111118] border border-white/5 rounded-xl p-5">
                 <p className="text-[11px] uppercase tracking-wider text-[#ff4f75] mb-1">fokus</p>
@@ -271,7 +265,7 @@ function App() {
                 <p className="text-white/70 text-sm">
                   {tool.ket}
                 </p>
-
+                
               </div>
 
             ))}
@@ -313,13 +307,12 @@ function App() {
                     className="h-[230px] relative overflow-hidden"
                     style={{ backgroundColor: style.bg }}
                   >
-
-                    <img
-                      src={proyek.gambar}
-                      alt={proyek.nama}
-                      className="w-full h-full object-cover hover:scale-110 transition duration-500"
-                    />
-
+                          <img
+  src={proyek.gambar}
+  alt={proyek.nama}
+  onClick={() => setSelectedImage(proyek.gambar)}
+  className="w-full h-full object-cover hover:scale-110 transition duration-500 cursor-pointer"
+/>
                   </div>
 
                   <div className="p-6">
@@ -349,7 +342,15 @@ function App() {
                         </span>
 
                       ))}
-
+                       <a
+  href={proyek.link}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-5 inline-block px-5 py-2 rounded-xl text-xs font-bold text-black 
+  bg-gradient-to-r from-[#10d9a0] to-[#0ea57b]"
+>
+  Lihat Website
+</a>
                     </div>
 
                   </div>
@@ -407,7 +408,18 @@ function App() {
           <a href="#" className="w-8 h-8 rounded-lg bg-[#111118] border border-white/5 flex items-center justify-center text-white/50 text-sm hover:bg-[#10d9a0] hover:text-black hover:border-[#10d9a0] transition duration-200"><i className="ri-linkedin-fill"></i></a>
         </div>
       </footer>
-
+    {selectedImage && (
+  <div
+    onClick={() => setSelectedImage(null)}
+    className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+  >
+    <img
+      src={selectedImage}
+      className="max-w-[90%] max-h-[90%] rounded-xl"
+      alt="preview"
+    />
+  </div>
+)}
     </div>
   );
 }
