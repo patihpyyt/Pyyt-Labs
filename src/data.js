@@ -21,6 +21,10 @@ import Tools8 from "/assets/tools/github.png";
 import Tools9 from "/assets/tools/ai.png";
 import Tools10 from "/assets/tools/canva.png";
 import Tools11 from "/assets/tools/figma.png";
+import Tools12 from "/assets/tools/py.png";
+import Tools13 from "/assets/tools/php.png";
+import Tools14 from "/assets/tools/lar.png";
+import Tools15 from "/assets/tools/mysql.png";
 
 export const listTools = [
   {
@@ -99,6 +103,34 @@ export const listTools = [
     nama: "Figma",
     ket: "Design App",
     dad: "1100",
+  },
+  {
+    id: 12,
+    gambar: Tools12,
+    nama: "py",
+    ket: "Language",
+    dad: "1200",
+  },
+  {
+    id: 13,
+    gambar: Tools13,
+    nama: "php",
+    ket: "Language",
+    dad: "1300",
+  },
+  {
+    id: 14,
+    gambar: Tools14,
+    nama: "laravel",
+    ket: "Framework",
+    dad: "1400",
+  },
+  {
+    id: 15,
+    gambar: Tools15,
+    nama: "mysql",
+    ket: "Database",
+    dad: "1500",
   },
 ];
 
