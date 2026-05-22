@@ -119,7 +119,7 @@ function App() {
                 href="/cv/cvgw.pdf"
                 className="px-8 py-4 rounded-xl bg-[#10d9a0] text-black font-black hover:scale-105 transition duration-300 shadow-[0_0_40px_rgba(16,217,160,.35)]"
               >
-                Download CV
+                Hubungi SAYA
               </a>
 
               <a
@@ -145,7 +145,7 @@ function App() {
       <div className="w-full h-full rounded-[26px] overflow-hidden bg-black">
 
         <img
-          src={DataImage.gwImage}
+          // src={DataImage.gwImage}
           alt="hero"
           className="w-full h-full object-cover object-top brightness-110 contrast-110 saturate-125"
         />
