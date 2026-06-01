@@ -400,8 +400,8 @@ function App() {
 
       {/* FOOTER (Tambahan dari file HTML) */}
       <footer className="mt-20 px-10 py-6 border-t border-white/5 flex flex-wrap justify-between items-center gap-4 bg-[#060609] relative z-10">
-        <div className="font-bold text-sm tracking-tight">IQ<span className="text-[#10d9a0]">.</span>DEV</div>
-        <span className="text-[11px] text-white/50 font-mono">© 2026 Muhammad Iqbal Patih. Dibuat dengan ❤️ dan banyak kopi.</span>
+        <div className="font-bold text-sm tracking-tight">PYYT<span className="text-[#10d9a0]">.</span>DEV</div>
+        <span className="text-[11px] text-white/50 font-mono">© 2026 Muhammad Iqbal Patih.</span>
         <div className="flex gap-2">
           <a href="#" className="w-8 h-8 rounded-lg bg-[#111118] border border-white/5 flex items-center justify-center text-white/50 text-sm hover:bg-[#10d9a0] hover:text-black hover:border-[#10d9a0] transition duration-200"><i className="ri-github-fill"></i></a>
           <a href="#" className="w-8 h-8 rounded-lg bg-[#111118] border border-white/5 flex items-center justify-center text-white/50 text-sm hover:bg-[#10d9a0] hover:text-black hover:border-[#10d9a0] transition duration-200"><i className="ri-instagram-fill"></i></a>
