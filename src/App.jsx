@@ -115,12 +115,14 @@ function App() {
             {/* BUTTON */}
             <div className="flex flex-wrap gap-4">
 
-              <a
-                href="/cv/cvgw.pdf"
-                className="px-8 py-4 rounded-xl bg-[#10d9a0] text-black font-black hover:scale-105 transition duration-300 shadow-[0_0_40px_rgba(16,217,160,.35)]"
-              >
-                Hubungi SAYA
-              </a>
+             <a
+  href="https://wa.me/6283893611581?text=Halo%20saya%20tertarik%20dengan%20portfolio%20Anda"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-8 py-4 rounded-xl bg-[#10d9a0] text-black font-black hover:scale-105 transition duration-300 shadow-[0_0_40px_rgba(16,217,160,.35)]"
+>
+  Hubungi Saya
+</a>
 
               <a
                 href="#proyek"
@@ -343,14 +345,14 @@ function App() {
 
                       ))}
                        <a
-  href={proyek.link}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="mt-5 inline-block px-5 py-2 rounded-xl text-xs font-bold text-black 
-  bg-gradient-to-r from-[#10d9a0] to-[#0ea57b]"
->
-  Lihat Website
-</a>
+                           href={proyek.link}
+                           target="_blank"
+                           rel="noopener noreferrer"
+                               className="mt-5 inline-block px-5 py-2 rounded-xl text-xs font-bold text-black 
+                           bg-gradient-to-r from-[#10d9a0] to-[#0ea57b]"
+                          >
+                          Lihat Website
+                      </a>
                     </div>
 
                   </div>
