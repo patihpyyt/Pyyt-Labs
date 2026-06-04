@@ -147,7 +147,7 @@ function App() {
       <div className="w-full h-full rounded-[26px] overflow-hidden bg-black">
 
         <img
-          // src={DataImage.gwImage}
+          src={DataImage.gwImage}
           alt="hero"
           className="w-full h-full object-cover object-top brightness-110 contrast-110 saturate-125"
         />

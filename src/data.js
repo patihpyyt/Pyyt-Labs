@@ -1,5 +1,4 @@
 import HeroImage from "/assets/hero-img.webp";
-import HeroImage1 from "/assets/hero-img1.webp";
 import gwImage from "/assets/gw-img.webp";
 
 const Image = {
