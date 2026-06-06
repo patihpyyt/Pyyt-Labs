@@ -33,11 +33,12 @@ function App() {
           alt="background"
           style={{
             position: "absolute",
-            width: "98%",
+            width: "80%",
             height: "130%",
             objectFit: "cover",
-            objectPosition: "80% top",
+            objectPosition: "center top",
             top: "-10%",
+            left: "34%",            /* paksa geser ke kanan */
             animation: "bgFloat 10s ease-in-out infinite",
           }}
         />
