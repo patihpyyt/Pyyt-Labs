@@ -1,0 +1,7 @@
+# Menyembunyikan semua file HTML dan XML dari perhitungan bahasa GitHub
+*.html linguist-detectable=false
+*.html linguist-documentation=false
+*.xml linguist-detectable=false
+
+# Deteksi file JSX sebagai kode utama yang dihitung
+*.jsx linguist-language=JavaScript
