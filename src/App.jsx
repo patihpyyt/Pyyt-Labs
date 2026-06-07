@@ -31,27 +31,45 @@ function App() {
         <img
           src={DataImage.gwImage}
           alt="background"
-          style={{
-            position: "absolute",
-            width: "80%",
-            height: "130%",
-            objectFit: "cover",
-            objectPosition: "center top",
-            top: "-10%",
-            left: "34%",            /* paksa geser ke kanan */
-            animation: "bgFloat 10s ease-in-out infinite",
-          }}
+          className="bg-photo"
         />
         {/* overlay gelap */}
-        <div className="absolute inset-0 bg-black/72"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
+        {/* fade kiri — smooth transition */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black from-30% via-black/80 via-50% to-transparent"></div>
+        {/* fade kanan — nutup kuping yang terpotong di HP */}
+        <div className="absolute inset-0 bg-gradient-to-l from-black from-5% via-black/50 via-20% to-transparent"></div>
+        {/* fade bawah */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
       </div>
 
-      {/* CSS animasi float */}
+      {/* CSS animasi float + responsif */}
       <style>{`
         @keyframes bgFloat {
           0%   { transform: translateY(0px) scale(1.03); }
           50%  { transform: translateY(-18px) scale(1.06); }
           100% { transform: translateY(0px) scale(1.03); }
+        }
+        .bg-photo {
+          position: absolute;
+          height: 130%;
+          object-fit: cover;
+          object-position: center top;
+          top: -10%;
+          animation: bgFloat 10s ease-in-out infinite;
+          /* DESKTOP: foto dari kanan, lebar 60% */
+          width: 60%;
+          right: 0;
+          left: auto;
+        }
+        @media (max-width: 768px) {
+          .bg-photo {
+            width: 70%;
+            right: 50%;
+            transform: translateX(50%);
+            left: auto;
+            object-position: center top;
+          }
         }
       `}</style>
 
