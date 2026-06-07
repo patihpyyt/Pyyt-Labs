@@ -44,34 +44,35 @@ function App() {
       </div>
 
       {/* CSS animasi float + responsif */}
-      <style>{`
-        @keyframes bgFloat {
-          0%   { transform: translateY(0px) scale(1.03); }
-          50%  { transform: translateY(-18px) scale(1.06); }
-          100% { transform: translateY(0px) scale(1.03); }
-        }
-        .bg-photo {
-          position: absolute;
-          height: 130%;
-          object-fit: cover;
-          object-position: center top;
-          top: -10%;
-          animation: bgFloat 10s ease-in-out infinite;
-          /* DESKTOP: foto dari kanan, lebar 60% */
-          width: 60%;
-          right: 0;
-          left: auto;
-        }
-        @media (max-width: 768px) {
-          .bg-photo {
-            width: 70%;
-            right: 50%;
-            transform: translateX(50%);
-            left: auto;
-            object-position: center top;
-          }
-        }
-      `}</style>
+<style>{`
+  @keyframes bgFloat {
+    0%   { transform: translateY(0px) scale(1.03); }
+    50%  { transform: translateY(-18px) scale(1.06); }
+    100% { transform: translateY(0px) scale(1.03); }
+  }
+  .bg-photo {
+    position: absolute;
+    height: 130%;
+    object-fit: cover;
+    object-position: center top;
+    top: -10%;
+    animation: bgFloat 10s ease-in-out infinite;
+    /* DESKTOP: foto dari kanan, lebar 60% */
+    width: 60%;
+    right: 0;
+    left: auto;
+  }
+  @media (max-width: 768px) {
+    .bg-photo {
+      /* HP: Lebarkan foto agar memenuhi layar background */
+      width: 100%; 
+      left: 0;
+      right: 0;
+      /* Menggeser fokus gambar agak ke kanan sedikit agar wajah/badan tidak tertutup teks hero */
+      object-position: 65% top; 
+    }
+  }
+`}</style>
 
       {/* CURSOR GLOW */}
       <div
