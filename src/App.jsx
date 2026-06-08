@@ -26,30 +26,40 @@ function App() {
   return (
     <div className="text-white min-h-screen w-full overflow-x-hidden relative">
 
-      {/* ===== FOTO FULL PAGE BACKGROUND + ANIMASI ===== */}
-      <div className="fixed inset-0 z-0 overflow-hidden">
-        <img
-          src={DataImage.gwImage}
-          alt="background"
-          className="bg-photo"
-        />
-        {/* overlay gelap */}
-        <div className="absolute inset-0 bg-black/60"></div>
-        {/* fade kiri — smooth transition */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black from-30% via-black/80 via-50% to-transparent"></div>
-        {/* fade kanan — nutup kuping yang terpotong di HP */}
-        <div className="absolute inset-0 bg-gradient-to-l from-black from-5% via-black/50 via-20% to-transparent"></div>
-        {/* fade bawah */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-      </div>
+     {/* ===== FOTO FULL PAGE BACKGROUND + ANIMASI ===== */}
+<div className="fixed inset-0 z-0 overflow-hidden">
+  <img
+    src={DataImage.gwImage}
+    alt="background"
+    className="bg-photo"
+  />
 
-      {/* CSS animasi float + responsif */}
+  {/* Overlay lebih terang di HP */}
+  <div className="absolute inset-0 bg-black/15 md:bg-black/60"></div>
+
+  {/* Gradient kiri */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black/40 md:from-black from-20% via-black/20 md:via-black/80 via-40% to-transparent"></div>
+
+  {/* Gradient kanan */}
+  <div className="absolute inset-0 bg-gradient-to-l from-black/20 md:from-black from-5% via-black/10 md:via-black/50 via-20% to-transparent"></div>
+
+  {/* Gradient bawah */}
+  <div className="absolute inset-0 bg-gradient-to-t from-black/20 md:from-black via-transparent to-transparent"></div>
+</div>
+
 <style>{`
   @keyframes bgFloat {
-    0%   { transform: translateY(0px) scale(1.03); }
-    50%  { transform: translateY(-18px) scale(1.06); }
-    100% { transform: translateY(0px) scale(1.03); }
+    0% {
+      transform: translateY(0px) scale(1.03);
+    }
+    50% {
+      transform: translateY(-18px) scale(1.06);
+    }
+    100% {
+      transform: translateY(0px) scale(1.03);
+    }
   }
+
   .bg-photo {
     position: absolute;
     height: 130%;
@@ -57,19 +67,29 @@ function App() {
     object-position: center top;
     top: -10%;
     animation: bgFloat 10s ease-in-out infinite;
-    /* DESKTOP: foto dari kanan, lebar 60% */
+
     width: 60%;
     right: 0;
     left: auto;
+
+    filter: brightness(1.15);
   }
+
   @media (max-width: 768px) {
     .bg-photo {
-      /* HP: Lebarkan foto agar memenuhi layar background */
-      width: 100%; 
+      width: 100%;
+      height: 120%;
+      top: -5%;
+
       left: 0;
       right: 0;
-      /* Menggeser fokus gambar agak ke kanan sedikit agar wajah/badan tidak tertutup teks hero */
-      object-position: 65% top; 
+
+      object-position: 65% top;
+
+      /* bikin muka lebih keliatan */
+      filter: brightness(2) contrast(1.1);
+
+      animation: none;
     }
   }
 `}</style>
