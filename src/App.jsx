@@ -35,7 +35,7 @@ function App() {
   />
 
   {/* Overlay lebih terang di HP */}
-  <div className="absolute inset-0 bg-black/85"></div>
+  <div className="absolute inset-0 bg-black/80"></div>
 
   {/* Gradient kiri */}
   <div className="absolute inset-0 bg-gradient-to-r from-black/40 md:from-black from-30% via-black/20 md:via-black/80 via-40% to-transparent"></div>
