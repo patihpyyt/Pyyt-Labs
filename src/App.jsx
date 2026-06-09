@@ -35,16 +35,16 @@ function App() {
   />
 
   {/* Overlay lebih terang di HP */}
-  <div className="absolute inset-0 bg-black/15 md:bg-black/60"></div>
+  <div className="absolute inset-0 bg-black/85"></div>
 
   {/* Gradient kiri */}
-  <div className="absolute inset-0 bg-gradient-to-r from-black/40 md:from-black from-20% via-black/20 md:via-black/80 via-40% to-transparent"></div>
+  <div className="absolute inset-0 bg-gradient-to-r from-black/40 md:from-black from-30% via-black/20 md:via-black/80 via-40% to-transparent"></div>
 
   {/* Gradient kanan */}
-  <div className="absolute inset-0 bg-gradient-to-l from-black/20 md:from-black from-5% via-black/10 md:via-black/50 via-20% to-transparent"></div>
+  <div className="absolute inset-0 bg-gradient-to-l from-black/20 md:from-black from-5% via-black/10 md:via-black/0 via-20% to-transparent"></div>
 
   {/* Gradient bawah */}
-  <div className="absolute inset-0 bg-gradient-to-t from-black/20 md:from-black via-transparent to-transparent"></div>
+   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
 </div>
 
 <style>{`
@@ -72,7 +72,7 @@ function App() {
     right: 0;
     left: auto;
 
-    filter: brightness(1.15);
+    filter: brightness(0,1);
   }
 
   @media (max-width: 768px) {
