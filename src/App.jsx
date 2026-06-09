@@ -62,10 +62,10 @@ function App() {
 
   .bg-photo {
     position: absolute;
-    height: 130%;
+    height: 100%;
     object-fit: cover;
-    object-position: center top;
-    top: -10%;
+    object-position: 85% top;
+    top:0;
     animation: bgFloat 10s ease-in-out infinite;
 
     width: 60%;
