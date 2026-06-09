@@ -86,10 +86,7 @@ function App() {
 
       object-position: 65% top;
 
-      /* bikin muka lebih keliatan */
-      filter: brightness(2) contrast(1.1);
-
-      animation: none;
+  
     }
   }
 `}</style>
