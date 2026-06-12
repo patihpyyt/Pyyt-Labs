@@ -126,11 +126,6 @@ function App() {
             <p className="uppercase text-[#f5a623] tracking-[5px] text-[12px] font-semibold">
               Web Developer & UI Designer
             </p>
-            <p className="text-zinc-400 text-lg leading-relaxed max-w-2xl font-medium">
-  Pyyt Labs adalah solusi profesional untuk pembuatan website bisnis, 
-  sistem informasi inventaris, dan pengembangan aplikasi custom yang disesuaikan 
-  dengan kebutuhan digitalisasi usaha Anda.
-</p>
             {/* DESC */}
             <p className="text-white/80 text-lg leading-9 max-w-xl">
               Jasa pembuatan website yang bukan cuma
