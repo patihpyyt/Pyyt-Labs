@@ -115,7 +115,7 @@ function App() {
             </div>
 
             {/* TITLE */}
-            <h1 className="text-[3.5rem] md:text-[6.5rem] leading-[0.95] font-black tracking-[-4px]">
+            <h1 className="text-[3.5rem] md:text-[4.5rem] leading-[0.95] font-black tracking-[-4px]">
               Muhammad
               <br />
               Iqbal{" "}
