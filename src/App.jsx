@@ -340,7 +340,7 @@ function App() {
       </div>
 
       {/* FOOTER */}
-      <footer className="mt-20 px-10 py-6 border-t border-white/5 flex flex-wrap justify-between items-center gap-4 bg-black/60 backdrop-blur-sm relative z-10">
+      {/* <footer className="mt-20 px-10 py-6 border-t border-white/5 flex flex-wrap justify-between items-center gap-4 bg-black/60 backdrop-blur-sm relative z-10">
         <div className="font-bold text-sm tracking-tight">PYYT<span className="text-[#10d9a0]">.</span>DEV</div>
         <span className="text-[11px] text-white/50 font-mono">© 2026 Muhammad Iqbal Patih.</span>
         <div className="flex gap-2">
@@ -348,7 +348,7 @@ function App() {
           <a href="#" className="w-8 h-8 rounded-lg bg-black/50 border border-white/5 flex items-center justify-center text-white/50 text-sm hover:bg-[#10d9a0] hover:text-black hover:border-[#10d9a0] transition duration-200"><i className="ri-instagram-fill"></i></a>
           <a href="#" className="w-8 h-8 rounded-lg bg-black/50 border border-white/5 flex items-center justify-center text-white/50 text-sm hover:bg-[#10d9a0] hover:text-black hover:border-[#10d9a0] transition duration-200"><i className="ri-linkedin-fill"></i></a>
         </div>
-      </footer>
+      </footer> */}
 
       {/* IMAGE PREVIEW MODAL */}
       {selectedImage && (
