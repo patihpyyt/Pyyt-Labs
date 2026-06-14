@@ -91,13 +91,29 @@ const Footer = () => {
             <p className="text-white/50 text-sm">Indonesia</p>
 
             <div className="flex gap-2 mt-2">
-              <a href="#" className="w-9 h-9 rounded-lg bg-black/50 border border-white/5 flex items-center justify-center text-white/50 text-base hover:bg-[#10d9a0] hover:text-black hover:border-[#10d9a0] transition duration-200">
+              {/* LINK GITHUB */}
+              <a 
+                href="https://github.com/patihpyyt" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg bg-black/50 border border-white/5 flex items-center justify-center text-white/50 text-base hover:bg-[#10d9a0] hover:text-black hover:border-[#10d9a0] transition duration-200"
+              >
                 <i className="ri-github-fill"></i>
               </a>
-              <a href="#" className="w-9 h-9 rounded-lg bg-black/50 border border-white/5 flex items-center justify-center text-white/50 text-base hover:bg-[#f5a623] hover:text-black hover:border-[#f5a623] transition duration-200">
+              
+              {/* INSTAGRAM */}
+              <a 
+                href="https://instagram.com/pyyt87_" 
+                className="w-9 h-9 rounded-lg bg-black/50 border border-white/5 flex items-center justify-center text-white/50 text-base hover:bg-[#f5a623] hover:text-black hover:border-[#f5a623] transition duration-200"
+              >
                 <i className="ri-instagram-fill"></i>
               </a>
-              <a href="#" className="w-9 h-9 rounded-lg bg-black/50 border border-white/5 flex items-center justify-center text-white/50 text-base hover:bg-[#ff4f75] hover:text-black hover:border-[#ff4f75] transition duration-200">
+              
+              {/* LINKEDIN */}
+              <a 
+                href="#" 
+                className="w-9 h-9 rounded-lg bg-black/50 border border-white/5 flex items-center justify-center text-white/50 text-base hover:bg-[#ff4f75] hover:text-black hover:border-[#ff4f75] transition duration-200"
+              >
                 <i className="ri-linkedin-fill"></i>
               </a>
             </div>
@@ -116,7 +132,7 @@ const Footer = () => {
           <div className="flex gap-6 text-[11px] text-white/40 font-mono">
             <a href="#" className="hover:text-[#10d9a0] transition duration-200">Privacy Policy</a>
             <a href="#" className="hover:text-[#f5a623] transition duration-200">Terms of Service</a>
-            <span>Made with ❤ in Indonesia</span>
+            <span>Made with in Indonesia</span>
           </div>
         </div>
 
