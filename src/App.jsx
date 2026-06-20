@@ -2,8 +2,90 @@ import { useEffect, useState } from "react";
 import DataImage from "./data";
 import { listTools, listProyek } from "./data";
 
+// ===== DATA ARTIKEL =====
+// Taruh ini di file ./data.js kalau mau konsisten sama listTools & listProyek,
+// atau biarin di sini juga gak masalah — tinggal pilih.
+const listArtikel = [
+  {
+    id: 1,
+    kategori: "Tips",
+    judul: "5 Alasan Kenapa Website Lo Wajib Ngebut (Bukan Cuma Buat SEO)",
+    ringkasan:
+      "Website lambat bukan cuma bikin Google ngambek — tapi bikin calon customer cabut sebelum sempet baca apa yang lo tawarin.",
+    waktuBaca: "3 menit baca",
+    isi: `Coba lo ingat-ingat, pernah gak lo klik link, terus loading-nya kelamaan, dan lo langsung pencet tombol back? Nah, calon client lo juga ngelakuin hal yang sama ke website lo kalau loading-nya lambat.
+
+Google emang lebih suka website cepat buat urusan SEO, tapi yang lebih penting: orang yang lagi cari jasa atau produk biasanya gak sabar. Begitu mereka ragu sedikit aja soal kecepatan, kepercayaan ke brand lo ikut turun — padahal mereka belum baca apa-apa.
+
+Di setiap proyek yang gw pegang, gw selalu mastiin gambar dikompres tanpa ngurangin kualitas, kode yang gak kepake dibuang, dan halaman dimuat secara bertahap biar yang penting muncul duluan. Hasilnya, website tetep keliatan premium tapi jalannya enteng.
+
+Intinya, kecepatan itu bukan fitur tambahan — itu bagian dari pengalaman pertama calon client sama brand lo. Dan first impression, kita semua tau, cuma dapet sekali kesempatan.`,
+  },
+  {
+    id: 2,
+    kategori: "Insight",
+    judul: "UI Cantik vs UX yang Jalan: Kenapa Dua-Duanya Harus Nyatu",
+    ringkasan:
+      "Desain yang Instagram-able doang gak otomatis bikin orang betah. Ini kenapa estetika dan fungsi itu satu paket, gak bisa dipisah.",
+    waktuBaca: "4 menit baca",
+    isi: `Banyak yang mikir kalau website udah keliatan estetik, urusan selesai. Tapi sering gw nemu kasus: desainnya bagus buat di-screenshot, tapi orang bingung mau klik apa, atau form kontaknya ketutup banner.
+
+UI itu soal gimana sesuatu kelihatan. UX itu soal gimana sesuatu kerasa dipakai. Dua hal ini harus jalan bareng — tombol CTA emang harus eye-catching, tapi dia juga harus jelas itu tombol apa dan ngarah ke mana.
+
+Di tiap proyek, gw selalu mulai dari mikirin alur: orang dateng dari mana, apa yang mereka cari, dan apa langkah selanjutnya yang paling masuk akal buat mereka. Baru setelah alurnya jelas, gw mikirin warna, tipografi, sama animasi yang nge-support alur itu — bukan sebaliknya.
+
+Jadi kalau lo nemu developer yang nanya "tujuan utama halaman ini apa" sebelum nanya "mau warna apa", itu pertanda bagus. Itu artinya dia ngedesain buat hasil, bukan cuma buat tampilan.`,
+  },
+  {
+    id: 3,
+    kategori: "Studi Kasus",
+    judul: "Dari Brief Berantakan Jadi Website yang Convert",
+    ringkasan:
+      "Cerita gimana gw biasa ngubah ide yang masih mentah jadi website yang rapi, cepat, dan bisa diandalkan buat jualan.",
+    waktuBaca: "4 menit baca",
+    isi: `Hampir semua client yang dateng ke gw biasanya bawa ide yang masih acak — kadang cuma referensi beberapa website yang disuka, kadang cuma cerita lisan tentang bisnisnya. Itu normal, dan justru dari situ kerjasama dimulai.
+
+Langkah pertama yang gw lakuin selalu sama: ngobrol dulu soal siapa target audiens-nya, apa yang mau dicapai dari website itu — jualan, branding, atau portofolio — baru setelah itu masuk ke struktur halaman dan konten apa aja yang perlu ada.
+
+Dari situ, brief yang awalnya berantakan jadi punya bentuk: halaman mana yang paling penting, informasi apa yang harus keliatan duluan, dan call-to-action apa yang paling masuk akal buat bisnis itu. Baru di tahap ini desain visual mulai dikerjain.
+
+Hasil akhirnya bukan cuma website yang rapi secara tampilan, tapi yang strukturnya emang dipikirin buat ngarahin pengunjung ke satu tujuan: percaya sama brand itu, lalu ngambil tindakan.`,
+  },
+  {
+    id: 4,
+    kategori: "Tips",
+    judul: "Checklist Sebelum Lo Order Jasa Bikin Website",
+    ringkasan:
+      "Biar gak salah pilih developer, ini hal-hal yang wajib lo tanyain sebelum deal — termasuk ke gw sendiri.",
+    waktuBaca: "3 menit baca",
+    isi: `Order jasa bikin website itu investasi, jadi wajar kalau lo mau mastiin uang lo gak salah tempat. Ini beberapa hal yang gw saranin buat ditanyain ke developer manapun — termasuk ke gw.
+
+Pertama, minta liat portofolio yang relevan sama jenis bisnis lo, bukan cuma yang paling keren. Kedua, tanyain gimana proses revisinya — berapa kali boleh revisi dan gimana kalau ada perubahan di luar brief awal. Ketiga, pastiin lo dapet kejelasan soal siapa yang pegang source code dan domain setelah proyek selesai.
+
+Keempat, jangan ragu nanya soal performa: apakah website-nya bakal cepat diakses dari HP, karena sebagian besar pengunjung sekarang dateng dari mobile. Kelima, pastiin ada kejelasan timeline — kapan mulai, kapan target selesai, dan apa yang terjadi kalau ada keterlambatan dari kedua belah pihak.
+
+Developer yang jujur gak akan keberatan dijawab pertanyaan-pertanyaan ini. Justru itu nunjukin dia kerja secara profesional, bukan asal jadi.`,
+  },
+  {
+    id: 5,
+    kategori: "Proses Kerja",
+    judul: "Gimana Gw Kerja: Dari Ngobrol Santai Sampe Website Live",
+    ringkasan:
+      "Biar lo tau apa yang bakal lo lalui kalau kerja sama gw — gak ada drama, gak ada ghosting, jelas dari awal sampe akhir.",
+    waktuBaca: "3 menit baca",
+    isi: `Banyak orang ragu pakai jasa freelance karena takut prosesnya gak jelas — mulai dari susah dihubungi, sampe hasil akhirnya beda jauh dari ekspektasi. Makanya gw selalu pastiin proses kerja gw jelas dari awal.
+
+Gw mulai dari ngobrol santai soal kebutuhan lo, lewat chat atau call, sampe gw paham gambaran besarnya. Dari situ gw bikin rencana halaman dan estimasi waktu, biar lo tau persis apa yang bakal lo dapet dan kapan.
+
+Selama proses pengerjaan, gw kasih update berkala — bukan cuma diem dan muncul lagi pas udah jadi. Kalau ada bagian yang menurut gw bisa lebih baik dari brief awal, gw bakal kasih saran, tapi keputusan akhir tetep di tangan lo.
+
+Pas website udah jadi, gw pastiin lo paham cara pakainya, dan tetep available kalau ada pertanyaan atau penyesuaian kecil setelahnya. Jadi gak ada cerita "developer ngilang abis transfer DP" di sini.`,
+  },
+];
+
 function App() {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedArtikel, setSelectedArtikel] = useState(null);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -38,7 +120,7 @@ function App() {
   <div className="absolute inset-0 bg-black/90"></div>
 
   {/* Gradient kiri */}
-  <div className="absolute inset-0 bg-gradient-to-r from-black/40 md:from-black from-30% via-black/20 md:via-black/80 via-40% to-transparent"></div>
+  <div className="absolute inset-0 bg-gradient-to-r from-black/40 md:from-black from-30% via-black/20 md:via-black/75 via-40% to-transparent"></div>
 
   {/* Gradient kanan */}
   <div className="absolute inset-0 bg-gradient-to-l from-black/20 md:from-black from-5% via-black/10 md:via-black/0 via-20% to-transparent"></div>
@@ -284,6 +366,48 @@ function App() {
           </div>
         </section>
 
+        {/* ARTIKEL & INSIGHT */}
+        <section id="artikel" className="pb-32">
+          <div className="mb-16">
+            <p className="uppercase tracking-[4px] text-[#10d9a0] text-xs mb-3">Insight & Studi Kasus</p>
+            <h1 className="text-5xl font-black tracking-[-2px]">Artikel & Cerita Dari Lapangan</h1>
+            <p className="text-white/50 text-sm mt-4 max-w-xl leading-7">
+              Hal-hal yang gw pelajari sambil ngerjain puluhan proyek — biar lo tahu apa yang bakal lo dapet kalau kerja sama gw.
+            </p>
+          </div>
+          <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-7">
+            {listArtikel.map((artikel, index) => {
+              const style = projectStyles[index % projectStyles.length];
+              return (
+                <div
+                  key={artikel.id}
+                  onClick={() => setSelectedArtikel(artikel)}
+                  className={`bg-black/50 backdrop-blur-sm border border-white/10 rounded-[26px] p-7 cursor-pointer hover:-translate-y-2 ${style.borderHover} transition duration-300 flex flex-col`}
+                >
+                  <span
+                    className="w-fit px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider mb-5"
+                    style={{
+                      color: style.tagColor,
+                      backgroundColor: style.tagColor + "15",
+                      border: `1px solid ${style.tagColor}40`,
+                    }}
+                  >
+                    {artikel.kategori}
+                  </span>
+                  <h1 className="text-xl font-black mb-3 leading-snug">{artikel.judul}</h1>
+                  <p className="text-white/60 text-sm leading-7 mb-6 flex-1">{artikel.ringkasan}</p>
+                  <div className="flex items-center justify-between text-xs text-white/40 font-mono mt-auto">
+                    <span>{artikel.waktuBaca}</span>
+                    <span className="font-bold" style={{ color: style.tagColor }}>
+                      Baca Selengkapnya →
+                    </span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
         <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent my-10"></div>
 
         {/* KONTAK */}
@@ -339,16 +463,7 @@ function App() {
 
       </div>
 
-      {/* FOOTER */}
-      {/* <footer className="mt-20 px-10 py-6 border-t border-white/5 flex flex-wrap justify-between items-center gap-4 bg-black/60 backdrop-blur-sm relative z-10">
-        <div className="font-bold text-sm tracking-tight">PYYT<span className="text-[#10d9a0]">.</span>DEV</div>
-        <span className="text-[11px] text-white/50 font-mono">© 2026 Muhammad Iqbal Patih.</span>
-        <div className="flex gap-2">
-          <a href="#" className="w-8 h-8 rounded-lg bg-black/50 border border-white/5 flex items-center justify-center text-white/50 text-sm hover:bg-[#10d9a0] hover:text-black hover:border-[#10d9a0] transition duration-200"><i className="ri-github-fill"></i></a>
-          <a href="#" className="w-8 h-8 rounded-lg bg-black/50 border border-white/5 flex items-center justify-center text-white/50 text-sm hover:bg-[#10d9a0] hover:text-black hover:border-[#10d9a0] transition duration-200"><i className="ri-instagram-fill"></i></a>
-          <a href="#" className="w-8 h-8 rounded-lg bg-black/50 border border-white/5 flex items-center justify-center text-white/50 text-sm hover:bg-[#10d9a0] hover:text-black hover:border-[#10d9a0] transition duration-200"><i className="ri-linkedin-fill"></i></a>
-        </div>
-      </footer> */}
+    
 
       {/* IMAGE PREVIEW MODAL */}
       {selectedImage && (
@@ -361,6 +476,54 @@ function App() {
             className="max-w-[90%] max-h-[90%] rounded-xl"
             alt="preview"
           />
+        </div>
+      )}
+
+      {/* ARTIKEL FULL MODAL */}
+      {selectedArtikel && (
+        <div
+          onClick={() => setSelectedArtikel(null)}
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4 md:p-10"
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="bg-[#0a0a0a] border border-white/10 rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-8 md:p-10 relative"
+          >
+            <button
+              onClick={() => setSelectedArtikel(null)}
+              className="absolute top-6 right-6 w-9 h-9 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-white/60 hover:text-white transition"
+              aria-label="Tutup"
+            >
+              ✕
+            </button>
+
+            <span
+              className="w-fit px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider mb-5 inline-block"
+              style={{
+                color: "#10d9a0",
+                backgroundColor: "#10d9a015",
+                border: "1px solid #10d9a040",
+              }}
+            >
+              {selectedArtikel.kategori}
+            </span>
+
+            <h2 className="text-3xl font-black mb-2 leading-tight pr-8">{selectedArtikel.judul}</h2>
+            <p className="text-white/40 text-xs font-mono mb-8">{selectedArtikel.waktuBaca}</p>
+
+            <div className="text-white/70 leading-8 text-[15px] whitespace-pre-line">
+              {selectedArtikel.isi}
+            </div>
+
+            <a
+              href="https://wa.me/6283893611581?text=Halo%20saya%20habis%20baca%20artikel%20lo%2C%20mau%20diskusi%20proyek"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-9 inline-block px-6 py-3 rounded-xl bg-[#10d9a0] text-black font-black text-sm hover:scale-105 transition duration-300"
+            >
+              Diskusi Proyek Lo Sekarang
+            </a>
+          </div>
         </div>
       )}
 
