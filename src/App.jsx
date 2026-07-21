@@ -3,6 +3,74 @@ import DataImage from "./data";
 import Artikel from "./components/Artikel";
 import { listTools, listProyek, listArtikel } from "./data";
 
+// DATA PAKET HARGA (FORMAT NATIVE NOMINAL & IKON RAPI)
+const listHarga = [
+  {
+    id: 1,
+    nama: "Tugas Kuliah / TA",
+    harga: "300rb - 700rb",
+    sub: "Bantuan Tugas & Skripsi Web",
+    fitur: [
+      "Full Source Code (Clean Code)",
+      "Database MySQL & File .SQL",
+      "Free Revisi s/d ACC",
+      "Penjelasan Logika Kodingan",
+      "Panduan Setup Localhost"
+    ],
+    badge: "Mahasiswa",
+    highlight: false,
+    waText: "Halo%20Iqbal,%20mau%20konsultasi%20Paket%20Tugas%20Kuliah",
+    icon: (
+      <svg className="w-6 h-6 text-[#10d9a0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+      </svg>
+    )
+  },
+  {
+    id: 2,
+    nama: "UMKM & Landing Page",
+    harga: "1 - 1,5 Juta",
+    sub: "Website Profil Usaha Terima Jadi",
+    fitur: [
+      "Desain Responsive HP & PC",
+      "Termasuk Domain .com / .biz.id (1 Thn)",
+      "Termasuk Hosting cPanel (1 Thn)",
+      "Integrasi Button WA Direct",
+      "Garansi Fix Bug / Maintenance"
+    ],
+    badge: "Best Seller",
+    highlight: true,
+    waText: "Halo%20Iqbal,%20mau%20order%20Paket%20Website%20UMKM",
+    icon: (
+      <svg className="w-6 h-6 text-[#10d9a0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+    )
+  },
+  {
+    id: 3,
+    nama: "Custom Fullstack System",
+    harga: "2 Juta++",
+    sub: "Sistem Informasi & Aplikasi Web Kompleks",
+    fitur: [
+      "Custom Framework (Laravel/React)",
+      "Full Admin Panel & Management Data",
+      "Integrasi Rest API / Payment / Multi Role",
+      "Setup Server cPanel / Vercel",
+      "Full Dokumentasi System"
+    ],
+    badge: "Custom",
+    highlight: false,
+    waText: "Halo%20Iqbal,%20mau%20diskusi%20Paket%20Custom%20System",
+    icon: (
+      <svg className="w-6 h-6 text-[#10d9a0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    )
+  }
+];
+
 function App() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedArtikel, setSelectedArtikel] = useState(null);
@@ -28,70 +96,68 @@ function App() {
   return (
     <div className="text-white min-h-screen w-full overflow-x-hidden relative">
 
-     {/* ===== FOTO FULL PAGE BACKGROUND + ANIMASI ===== */}
-<div className="fixed inset-0 z-0 overflow-hidden">
-  <img
-    src={DataImage.gwImage}
-    alt="background"
-    className="bg-photo"
-  />
+      {/* ===== FOTO FULL PAGE BACKGROUND + ANIMASI ===== */}
+      <div className="fixed inset-0 z-0 overflow-hidden">
+        <img
+          src={DataImage.gwImage}
+          alt="background"
+          className="bg-photo"
+        />
 
-  {/* Overlay lebih terang di HP */}
-  <div className="absolute inset-0 bg-black/90"></div>
+        {/* Overlay lebih terang di HP */}
+        <div className="absolute inset-0 bg-black/90"></div>
 
-  {/* Gradient kiri */}
-  <div className="absolute inset-0 bg-gradient-to-r from-black/40 md:from-black from-30% via-black/20 md:via-black/75 via-40% to-transparent"></div>
+        {/* Gradient kiri */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/40 md:from-black from-30% via-black/20 md:via-black/75 via-40% to-transparent"></div>
 
-  {/* Gradient kanan */}
-  <div className="absolute inset-0 bg-gradient-to-l from-black/20 md:from-black from-5% via-black/10 md:via-black/0 via-20% to-transparent"></div>
+        {/* Gradient kanan */}
+        <div className="absolute inset-0 bg-gradient-to-l from-black/20 md:from-black from-5% via-black/10 md:via-black/0 via-20% to-transparent"></div>
 
-  {/* Gradient bawah */}
-   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-</div>
+        {/* Gradient bawah */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+      </div>
 
-<style>{`
-  @keyframes bgFloat {
-    0% {
-      transform: translateY(0px) scale(1.03);
-    }
-    50% {
-      transform: translateY(-18px) scale(1.06);
-    }
-    100% {
-      transform: translateY(0px) scale(1.03);
-    }
-  }
+      <style>{`
+        @keyframes bgFloat {
+          0% {
+            transform: translateY(0px) scale(1.03);
+          }
+          50% {
+            transform: translateY(-18px) scale(1.06);
+          }
+          100% {
+            transform: translateY(0px) scale(1.03);
+          }
+        }
 
-  .bg-photo {
-    position: absolute;
-    height: 100%;
-    object-fit: cover;
-    object-position: 85% top;
-    top:0;
-    animation: bgFloat 10s ease-in-out infinite;
+        .bg-photo {
+          position: absolute;
+          height: 100%;
+          object-fit: cover;
+          object-position: 85% top;
+          top:0;
+          animation: bgFloat 10s ease-in-out infinite;
 
-    width: 60%;
-    right: 0;
-    left: auto;
+          width: 60%;
+          right: 0;
+          left: auto;
 
-    filter: brightness(1);
-  }
+          filter: brightness(1);
+        }
 
-  @media (max-width: 768px) {
-    .bg-photo {
-      width: 100%;
-      height: 120%;
-      top: -5%;
+        @media (max-width: 768px) {
+          .bg-photo {
+            width: 100%;
+            height: 120%;
+            top: -5%;
 
-      left: 0;
-      right: 0;
+            left: 0;
+            right: 0;
 
-      object-position: 65% top;
-
-  
-    }
-  }
-`}</style>
+            object-position: 65% top;
+          }
+        }
+      `}</style>
 
       {/* CURSOR GLOW */}
       <div
@@ -101,7 +167,7 @@ function App() {
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
 
-        {/* HERO — full width, no photo card */}
+        {/* HERO */}
         <section
           id="beranda"
           className="min-h-screen flex flex-col justify-center pt-[130px] pb-20"
@@ -204,6 +270,82 @@ function App() {
                 <p className="text-white/50 text-sm">User-first. Performance-obsessed. Deadline-friendly. Tanpa kompromi soal kualitas.</p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* ===== SECTION HARGA / PRICING ===== */}
+        <section id="layanan" className="py-20">
+          <div className="mb-16">
+            <p className="uppercase tracking-[4px] text-[#10d9a0] text-xs mb-3">// Paket & Layanan</p>
+            <h1 className="text-5xl font-black tracking-[-2px]">Paket Harga</h1>
+          </div>
+
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7 items-stretch">
+            {listHarga.map((item) => (
+              <div
+                key={item.id}
+                className={`bg-black/50 backdrop-blur-sm border rounded-[26px] p-8 flex flex-col justify-between transition duration-300 relative ${
+                  item.highlight
+                    ? "border-[#10d9a0] shadow-[0_0_30px_rgba(16,217,160,0.15)]"
+                    : "border-white/10 hover:border-white/20"
+                }`}
+              >
+                <span
+                  className={`absolute -top-3 left-6 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider ${
+                    item.highlight
+                      ? "bg-[#10d9a0] text-black"
+                      : "bg-white/10 text-white/70 border border-white/10"
+                  }`}
+                >
+                  {item.badge}
+                </span>
+
+                <div>
+                  {/* Judul + Icon Minimalis */}
+                  <div className="flex items-center gap-3 mb-1 mt-2">
+                    <div className="p-2 rounded-lg bg-[#10d9a0]/10 border border-[#10d9a0]/20">
+                      {item.icon}
+                    </div>
+                    <h3 className="text-xl font-black">{item.nama}</h3>
+                  </div>
+
+                  <p className="text-white/50 text-xs mb-6">{item.sub}</p>
+
+                  <div className="mb-6">
+                    <span className="text-3xl font-black text-[#10d9a0]">Rp {item.harga}</span>
+                  </div>
+
+                  <div className="h-px bg-white/10 mb-6"></div>
+
+                  <ul className="flex flex-col gap-3 mb-8 text-sm text-white/70">
+                    {item.fitur.map((f, idx) => (
+                      <li key={idx} className="flex items-center gap-3">
+                        {/* Custom Clean SVG Check Icon */}
+                        <div className="w-4 h-4 rounded-full bg-[#10d9a0]/10 border border-[#10d9a0]/30 flex items-center justify-center flex-shrink-0">
+                          <svg className="w-2.5 h-2.5 text-[#10d9a0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                        <span className="text-white/80">{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <a
+                  href={`https://wa.me/6283893611581?text=${item.waText}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`w-full py-3.5 rounded-xl font-bold text-sm text-center transition duration-300 block ${
+                    item.highlight
+                      ? "bg-[#10d9a0] text-black hover:scale-105"
+                      : "bg-white/10 text-white hover:bg-white/20"
+                  }`}
+                >
+                  Pesan Paket Ini
+                </a>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -382,8 +524,6 @@ function App() {
         </section>
 
       </div>
-
-
 
       {/* IMAGE PREVIEW MODAL */}
       {selectedImage && (
