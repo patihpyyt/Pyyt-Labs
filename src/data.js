@@ -137,8 +137,8 @@ import Proyek1 from "/assets/proyek/servis.webp";
 import Proyek2 from "/assets/proyek/py.webp";
 import Proyek3 from "/assets/proyek/ke.webp";
 import Proyek4 from "/assets/proyek/kal.webp";
-import Proyek5 from "/assets/proyek/absen.webp";
-import Proyek6 from "/assets/proyek/proyek6.webp";
+import Proyek5 from "/assets/proyek/bansos.webp";
+import Proyek6 from "/assets/proyek/buku.webp";
 
 export const listProyek = [
   {
@@ -179,16 +179,16 @@ export const listProyek = [
   {
     id: 5,
     gambar: Proyek5,
-    nama: "Absesnsi Mahasiswa",
-    desk: "Website manajemen kehadiran mahasiswa yang memudahkan dosen dalam mencatat dan memantau absensi perkuliahan. Sistem menyediakan fitur pencatatan status hadir, izin, dan sakit serta rekapitulasi data kehadiran secara terstruktur.",
-    tools: ["HTML", "CSS", "Javascript", "Bootsrap"],
+    nama: "Sistem monitoring Bantuan Sosial",
+    desk: "Aplikasi untuk petugas desa mendata warga penerima bansos (PKH, BLT, BPNT), status penyaluran, dan laporan per periode. Warga bisa cek status bantuan mereka via web.",
+    tools: ["HTML", "Talwind CSS", "Javascript", "Laravel"],
     dad: "600",
   },
   {
     id: 6,
     gambar: Proyek6,
-    nama: "Company Profile 2.0",
-    desk: "website profil modern yang tidak hanya menampilkan informasi dasar perusahaan, tetapi juga menekankan interaksi, visual yang menarik, dan kemudahan akses informasi untuk membangun citra profesional dan kepercayaan audiens.",
+    nama: "Buku Kakulus",
+    desk: "WEB kalkulus menyelasikan permasalhan materi fungsi turunan dan integeral",
     tools: ["NextJS", "TailwindCSS", "Framermotion"],
     dad: "700",
   },
