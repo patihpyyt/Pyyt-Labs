@@ -3,7 +3,7 @@ import DataImage from "./data";
 import Artikel from "./components/Artikel";
 import { listTools, listProyek, listArtikel } from "./data";
 
-// DATA PAKET HARGA (FORMAT NATIVE NOMINAL & IKON RAPI)
+// DATA PAKET HARGA
 const listHarga = [
   {
     id: 1,
@@ -19,7 +19,7 @@ const listHarga = [
     ],
     badge: "Mahasiswa",
     highlight: false,
-    waText: "Halo%20Iqbal,%20mau%20konsultasi%20Paket%20Tugas%20Kuliah",
+    waText: "Halo%20Iqbal,%20saya%20sudah%20transfer%20untuk%20Paket%20Tugas%20Kuliah.",
     icon: (
       <svg className="w-6 h-6 text-[#10d9a0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 14l9-5-9-5-9 5 9 5z" />
@@ -41,7 +41,7 @@ const listHarga = [
     ],
     badge: "Best Seller",
     highlight: true,
-    waText: "Halo%20Iqbal,%20mau%20order%20Paket%20Website%20UMKM",
+    waText: "Halo%20Iqbal,%20saya%20sudah%20transfer%20untuk%20Paket%20Website%20UMKM.",
     icon: (
       <svg className="w-6 h-6 text-[#10d9a0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -62,7 +62,7 @@ const listHarga = [
     ],
     badge: "Custom",
     highlight: false,
-    waText: "Halo%20Iqbal,%20mau%20diskusi%20Paket%20Custom%20System",
+    waText: "Halo%20Iqbal,%20saya%20mau%20diskusi%20DP/Transfer%20Paket%20Custom%20System.",
     icon: (
       <svg className="w-6 h-6 text-[#10d9a0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -74,6 +74,18 @@ const listHarga = [
 function App() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedArtikel, setSelectedArtikel] = useState(null);
+  
+  // STATE UNTUK MODAL PEMBAYARAN
+  const [selectedPaket, setSelectedPaket] = useState(null);
+  const [copied, setCopied] = useState(false);
+
+  const noRekening = "03240152313508";
+
+  const handleCopyRekening = () => {
+    navigator.clipboard.writeText(noRekening);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -104,30 +116,17 @@ function App() {
           className="bg-photo"
         />
 
-        {/* Overlay lebih terang di HP */}
         <div className="absolute inset-0 bg-black/90"></div>
-
-        {/* Gradient kiri */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 md:from-black from-30% via-black/20 md:via-black/75 via-40% to-transparent"></div>
-
-        {/* Gradient kanan */}
         <div className="absolute inset-0 bg-gradient-to-l from-black/20 md:from-black from-5% via-black/10 md:via-black/0 via-20% to-transparent"></div>
-
-        {/* Gradient bawah */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
       </div>
 
       <style>{`
         @keyframes bgFloat {
-          0% {
-            transform: translateY(0px) scale(1.03);
-          }
-          50% {
-            transform: translateY(-18px) scale(1.06);
-          }
-          100% {
-            transform: translateY(0px) scale(1.03);
-          }
+          0% { transform: translateY(0px) scale(1.03); }
+          50% { transform: translateY(-18px) scale(1.06); }
+          100% { transform: translateY(0px) scale(1.03); }
         }
 
         .bg-photo {
@@ -137,11 +136,9 @@ function App() {
           object-position: 85% top;
           top:0;
           animation: bgFloat 10s ease-in-out infinite;
-
           width: 60%;
           right: 0;
           left: auto;
-
           filter: brightness(1);
         }
 
@@ -150,10 +147,8 @@ function App() {
             width: 100%;
             height: 120%;
             top: -5%;
-
             left: 0;
             right: 0;
-
             object-position: 65% top;
           }
         }
@@ -173,8 +168,6 @@ function App() {
           className="min-h-screen flex flex-col justify-center pt-[130px] pb-20"
         >
           <div className="flex flex-col gap-7 max-w-3xl">
-
-            {/* BADGE */}
             <div className="w-fit px-5 py-2 rounded-full border border-[#10d9a0]/20 bg-[#10d9a0]/5 flex items-center gap-3">
               <div className="w-2 h-2 rounded-full bg-[#10d9a0] animate-pulse"></div>
               <p className="text-[#10d9a0] uppercase tracking-[2px] text-[11px] font-semibold">
@@ -182,19 +175,13 @@ function App() {
               </p>
             </div>
 
-            {/* TITLE */}
             <h1 className="text-[3.5rem] md:text-[4.5rem] leading-[0.95] font-black tracking-[-4px]">
-              Muhammad
-              <br />
-              Iqbal{" "}
-              <span className="text-[#10d9a0]">Patih</span>
+              Muhammad<br />Iqbal <span className="text-[#10d9a0]">Patih</span>
             </h1>
 
-            {/* SUB */}
             <p className="uppercase text-[#f5a623] tracking-[5px] text-[12px] font-semibold">
               Web Developer & UI Designer
             </p>
-            {/* DESC */}
             <p className="text-white/80 text-lg leading-9 max-w-xl">
               Jasa pembuatan website yang bukan cuma
               <span className="text-[#f5a623] font-semibold"> kelihatan keren </span>
@@ -202,7 +189,6 @@ function App() {
               <span className="text-[#10d9a0] font-semibold"> smooth, cepat, modern, dan powerful.</span>
             </p>
 
-            {/* BUTTON */}
             <div className="flex flex-wrap gap-4">
               <a
                 href="https://wa.me/6283893611581?text=Halo%20saya%20tertarik%20dengan%20portfolio%20Anda"
@@ -219,7 +205,6 @@ function App() {
                 Lihat Proyek
               </a>
             </div>
-
           </div>
         </section>
 
@@ -301,7 +286,6 @@ function App() {
                 </span>
 
                 <div>
-                  {/* Judul + Icon Minimalis */}
                   <div className="flex items-center gap-3 mb-1 mt-2">
                     <div className="p-2 rounded-lg bg-[#10d9a0]/10 border border-[#10d9a0]/20">
                       {item.icon}
@@ -320,7 +304,6 @@ function App() {
                   <ul className="flex flex-col gap-3 mb-8 text-sm text-white/70">
                     {item.fitur.map((f, idx) => (
                       <li key={idx} className="flex items-center gap-3">
-                        {/* Custom Clean SVG Check Icon */}
                         <div className="w-4 h-4 rounded-full bg-[#10d9a0]/10 border border-[#10d9a0]/30 flex items-center justify-center flex-shrink-0">
                           <svg className="w-2.5 h-2.5 text-[#10d9a0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
@@ -332,10 +315,9 @@ function App() {
                   </ul>
                 </div>
 
-                <a
-                  href={`https://wa.me/6283893611581?text=${item.waText}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                {/* KLIK TOMBOL BUKA MODAL REKENING */}
+                <button
+                  onClick={() => setSelectedPaket(item)}
                   className={`w-full py-3.5 rounded-xl font-bold text-sm text-center transition duration-300 block ${
                     item.highlight
                       ? "bg-[#10d9a0] text-black hover:scale-105"
@@ -343,7 +325,7 @@ function App() {
                   }`}
                 >
                   Pesan Paket Ini
-                </a>
+                </button>
               </div>
             ))}
           </div>
@@ -524,6 +506,65 @@ function App() {
         </section>
 
       </div>
+
+      {/* ===== MODAL PEMBAYARAN REKENING ===== */}
+      {selectedPaket && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 z-50">
+          <div className="bg-[#121212] border border-[#10d9a0]/30 rounded-3xl p-7 max-w-md w-full relative shadow-[0_0_50px_rgba(16,217,160,0.2)]">
+            
+            {/* Tombol Close */}
+            <button
+              onClick={() => setSelectedPaket(null)}
+              className="absolute top-5 right-5 text-white/50 hover:text-white text-lg font-bold w-8 h-8 rounded-full bg-white/5 flex items-center justify-center"
+            >
+              ✕
+            </button>
+
+            <p className="text-[10px] uppercase tracking-widest text-[#10d9a0] font-mono mb-1">
+              Informasi Pembayaran
+            </p>
+            <h3 className="text-2xl font-black mb-1">{selectedPaket.nama}</h3>
+            <p className="text-[#10d9a0] font-black text-xl mb-6">Rp {selectedPaket.harga}</p>
+
+            <div className="bg-black/60 border border-white/10 rounded-2xl p-5 mb-6">
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-xs text-white/60 uppercase font-mono">Bank Tujuan</span>
+                <span className="text-sm font-bold text-white tracking-wider">BANK BRI</span>
+              </div>
+              
+              <div className="text-xs text-white/60 uppercase font-mono mb-1">Nomor Rekening</div>
+              <div className="flex items-center justify-between bg-white/5 rounded-xl p-3 border border-white/5">
+                <span className="font-mono text-lg font-bold text-[#10d9a0] tracking-wider">
+                  0324 0105 2313 508
+                </span>
+                <button
+                  onClick={handleCopyRekening}
+                  className="px-3 py-1.5 rounded-lg bg-[#10d9a0]/10 text-[#10d9a0] text-xs font-bold hover:bg-[#10d9a0] hover:text-black transition"
+                >
+                  {copied ? "Tercopy!" : "Copy"}
+                </button>
+              </div>
+
+              <div className="mt-3 text-xs text-white/50">
+                A.n: <span className="text-white font-medium">Muhammad Iqbal Patih</span>
+              </div>
+            </div>
+
+            <p className="text-xs text-white/50 mb-6 text-center leading-relaxed">
+              Silakan transfer ke nomor rekening di atas, lalu klik tombol di bawah untuk konfirmasi bukti transfer via WhatsApp.
+            </p>
+
+            <a
+              href={`https://wa.me/6283893611581?text=${selectedPaket.waText}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-4 rounded-xl bg-[#10d9a0] text-black font-black text-center block hover:scale-[1.02] transition shadow-[0_0_30px_rgba(16,217,160,0.3)]"
+            >
+              Konfirmasi Transfer via WhatsApp →
+            </a>
+          </div>
+        </div>
+      )}
 
       {/* IMAGE PREVIEW MODAL */}
       {selectedImage && (
