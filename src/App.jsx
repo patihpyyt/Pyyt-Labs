@@ -3,23 +3,23 @@ import DataImage from "./data";
 import Artikel from "./components/Artikel";
 import { listTools, listProyek, listArtikel } from "./data";
 
-// DATA PAKET HARGA
+// DATA PAKET HARGA (KHUSUS WEBSITE)
 const listHarga = [
   {
     id: 1,
-    nama: "Tugas Kuliah / TA",
+    nama: "Tugas Kuliah / Skripsi Web",
     harga: "300rb - 700rb",
-    sub: "Bantuan Tugas & Skripsi Web",
+    sub: "Bantuan Pembuatan Website Tugas & Skripsi",
     fitur: [
       "Full Source Code (Clean Code)",
       "Database MySQL & File .SQL",
       "Free Revisi s/d ACC",
-      "Penjelasan Logika Kodingan",
-      "Panduan Setup Localhost"
+      "Penjelasan Logika & Arsitektur Code",
+      "Panduan Setup Localhost / XAMPP"
     ],
     badge: "Mahasiswa",
     highlight: false,
-    waText: "Halo%20Iqbal,%20saya%20sudah%20transfer%20untuk%20Paket%20Tugas%20Kuliah.",
+    waText: "Halo%20Iqbal,%20saya%20sudah%20transfer%20untuk%20Paket%20Tugas%20Kuliah%20Web.",
     icon: (
       <svg className="w-6 h-6 text-[#10d9a0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 14l9-5-9-5-9 5 9 5z" />
@@ -29,19 +29,19 @@ const listHarga = [
   },
   {
     id: 2,
-    nama: "UMKM & Landing Page",
+    nama: "Landing Page & Company Profile",
     harga: "1 - 1,5 Juta",
-    sub: "Website Profil Usaha Terima Jadi",
+    sub: "Website Profil Usaha / UMKM Terima Jadi",
     fitur: [
-      "Desain Responsive HP & PC",
+      "Desain Modern & Responsive (HP & PC)",
       "Termasuk Domain .com / .biz.id (1 Thn)",
-      "Termasuk Hosting cPanel (1 Thn)",
-      "Integrasi Button WA Direct",
-      "Garansi Fix Bug / Maintenance"
+      "Termasuk Hosting Fast Server (1 Thn)",
+      "Integrasi Tombol WhatsApp Direct",
+      "SEO Friendly & Garansi Fix Bug"
     ],
     badge: "Best Seller",
     highlight: true,
-    waText: "Halo%20Iqbal,%20saya%20sudah%20transfer%20untuk%20Paket%20Website%20UMKM.",
+    waText: "Halo%20Iqbal,%20saya%20sudah%20transfer%20untuk%20Paket%20Website%20Company%20Profile.",
     icon: (
       <svg className="w-6 h-6 text-[#10d9a0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -50,19 +50,19 @@ const listHarga = [
   },
   {
     id: 3,
-    nama: "Custom Fullstack System",
+    nama: "Web App / Complex System",
     harga: "2 Juta++",
-    sub: "Sistem Informasi & Aplikasi Web Kompleks",
+    sub: "Aplikasi Web & Sistem Informasi Custom",
     fitur: [
-      "Custom Framework (Laravel/React)",
-      "Full Admin Panel & Management Data",
-      "Integrasi Rest API / Payment / Multi Role",
-      "Setup Server cPanel / Vercel",
-      "Full Dokumentasi System"
+      "Frontend & Backend Full Custom",
+      "Full Admin Panel & Dashboard Data",
+      "Manajemen User / Multi Role / Auth",
+      "Integrasi REST API & Database Complex",
+      "Setup Hosting / Cloud Deployment"
     ],
-    badge: "Custom",
+    badge: "Custom Web",
     highlight: false,
-    waText: "Halo%20Iqbal,%20saya%20mau%20diskusi%20DP/Transfer%20Paket%20Custom%20System.",
+    waText: "Halo%20Iqbal,%20saya%20mau%20diskusi%20DP/Transfer%20Paket%20Custom%20Web%20App.",
     icon: (
       <svg className="w-6 h-6 text-[#10d9a0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -171,7 +171,7 @@ function App() {
             <div className="w-fit px-5 py-2 rounded-full border border-[#10d9a0]/20 bg-[#10d9a0]/5 flex items-center gap-3">
               <div className="w-2 h-2 rounded-full bg-[#10d9a0] animate-pulse"></div>
               <p className="text-[#10d9a0] uppercase tracking-[2px] text-[11px] font-semibold">
-                Available For Freelance
+                Available For Web Freelance
               </p>
             </div>
 
@@ -186,12 +186,12 @@ function App() {
               Jasa pembuatan website yang bukan cuma
               <span className="text-[#f5a623] font-semibold"> kelihatan keren </span>
               — tapi juga
-              <span className="text-[#10d9a0] font-semibold"> smooth, cepat, modern, dan powerful.</span>
+              <span className="text-[#10d9a0] font-semibold"> smooth, cepat, responsive, dan powerful.</span>
             </p>
 
             <div className="flex flex-wrap gap-4">
               <a
-                href="https://wa.me/6283893611581?text=Halo%20saya%20tertarik%20dengan%20portfolio%20Anda"
+                href="https://wa.me/6283893611581?text=Halo%20saya%20tertarik%20dengan%20jasa%20pembuatan%20website%20Anda"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-4 rounded-xl bg-[#10d9a0] text-black font-black hover:scale-105 transition duration-300 shadow-[0_0_40px_rgba(16,217,160,.35)]"
@@ -212,15 +212,15 @@ function App() {
         <div className="grid md:grid-cols-3 gap-px bg-white/5 border border-white/5 rounded-2xl overflow-hidden my-20">
           <div className="bg-black/50 backdrop-blur-sm p-7 text-center hover:bg-black/70 transition duration-200">
             <div className="text-4xl font-bold text-[#10d9a0]">45+</div>
-            <div className="text-[11px] text-white/50 uppercase tracking-widest mt-1">Proyek Selesai</div>
+            <div className="text-[11px] text-white/50 uppercase tracking-widest mt-1">Web Proyek Selesai</div>
           </div>
           <div className="bg-black/50 backdrop-blur-sm p-7 text-center hover:bg-black/70 transition duration-200">
             <div className="text-4xl font-bold text-[#f5a623]">4+</div>
-            <div className="text-[11px] text-white/50 uppercase tracking-widest mt-1">Tahun Ngoding</div>
+            <div className="text-[11px] text-white/50 uppercase tracking-widest mt-1">Tahun Web Dev</div>
           </div>
           <div className="bg-black/50 backdrop-blur-sm p-7 text-center hover:bg-black/70 transition duration-200">
-            <div className="text-4xl font-bold text-[#ff4f75]">∞</div>
-            <div className="text-[11px] text-white/50 uppercase tracking-widest mt-1">Semangat Buat Berkarya</div>
+            <div className="text-4xl font-bold text-[#ff4f75]">100%</div>
+            <div className="text-[11px] text-white/50 uppercase tracking-widest mt-1">Fokus Web Development</div>
           </div>
         </div>
 
@@ -235,24 +235,23 @@ function App() {
               <p className="text-6xl font-bold text-[#10d9a0] opacity-20 leading-none">"</p>
               <p className="text-white/60 leading-relaxed -mt-2 text-[15px]">
                 Hai! Saya <span className="text-white font-medium">Muhammad Iqbal Patih</span> —{" "}
-                <span className="text-white font-medium">Full Stack Web Developer</span> sekaligus{" "}
-                <span className="text-white font-medium">UI/UX Designer</span>. Saya percaya desain yang bagus dan kode yang solid harus selalu jalan bareng.
+                <span className="text-white font-medium">Full Stack Web Developer</span> khusus spesialisasi aplikasi dan situs web. Saya percaya UI yang bersih dan struktur database/backend yang rapi harus berjalan berdampingan.
                 <br /><br />
-                Setiap piksel dan setiap baris kode punya tujuan. Saya suka detail kecil yang bikin perbedaan besar — dari micro-interaction sampai arsitektur database.
+                Saya terbiasa membangun sistem informasi, landing page modern, hingga pengerjaan website untuk tugas akhir/skripsi dengan kode yang rapi &amp; mudah dipahami.
               </p>
             </div>
             <div className="flex flex-col gap-4">
               <div className="bg-black/50 backdrop-blur-sm border border-white/5 rounded-xl p-5">
                 <p className="text-[11px] uppercase tracking-wider text-[#f5a623] mb-1">philosophy</p>
-                <p className="text-white/50 text-sm">"Kode yang gacor lahir dari ketekunan." — bukan sekadar quote, tapi cara saya kerja tiap hari.</p>
+                <p className="text-white/50 text-sm">"Kode web yang bersih dan efisien lahir dari ketekunan." — standar yang selalu saya pegang di setiap project web.</p>
               </div>
               <div className="bg-black/50 backdrop-blur-sm border border-white/5 rounded-xl p-5">
-                <p className="text-[11px] uppercase tracking-wider text-[#ff4f75] mb-1">fokus</p>
-                <p className="text-white/50 text-sm">Web dev, UI/UX, poster design. Semua yang bikin layar jadi tempat yang enak dilihat &amp; dipakai.</p>
+                <p className="text-[11px] uppercase tracking-wider text-[#ff4f75] mb-1">fokus utama</p>
+                <p className="text-white/50 text-sm">Spesialis pembuatan Website (Frontend, Backend, Database MySQL, &amp; Responsive Web Design).</p>
               </div>
               <div className="bg-black/50 backdrop-blur-sm border border-white/5 rounded-xl p-5">
                 <p className="text-[11px] uppercase tracking-wider text-[#10d9a0] mb-1">approach</p>
-                <p className="text-white/50 text-sm">User-first. Performance-obsessed. Deadline-friendly. Tanpa kompromi soal kualitas.</p>
+                <p className="text-white/50 text-sm">User-first. Fast Loading. Responsive Display. Bebas ribet untuk klien.</p>
               </div>
             </div>
           </div>
@@ -261,8 +260,8 @@ function App() {
         {/* ===== SECTION HARGA / PRICING ===== */}
         <section id="layanan" className="py-20">
           <div className="mb-16">
-            <p className="uppercase tracking-[4px] text-[#10d9a0] text-xs mb-3">// Paket & Layanan</p>
-            <h1 className="text-5xl font-black tracking-[-2px]">Paket Harga</h1>
+            <p className="uppercase tracking-[4px] text-[#10d9a0] text-xs mb-3">// Layanan Pembuatan Website</p>
+            <h1 className="text-5xl font-black tracking-[-2px]">Paket Harga Website</h1>
           </div>
 
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7 items-stretch">
@@ -336,8 +335,8 @@ function App() {
         {/* TOOLS */}
         <section id="tools" className="py-32">
           <div className="mb-16">
-            <p className="uppercase tracking-[4px] text-[#f5a623] text-xs mb-3">Tech Stack</p>
-            <h1 className="text-5xl font-black tracking-[-2px]">Tools Yang Biasa Dipakai</h1>
+            <p className="uppercase tracking-[4px] text-[#f5a623] text-xs mb-3">Web Tech Stack</p>
+            <h1 className="text-5xl font-black tracking-[-2px]">Tools Web Yang Biasa Dipakai</h1>
           </div>
           <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
             {listTools.map((tool) => (
@@ -359,7 +358,7 @@ function App() {
         <section id="proyek" className="pb-32">
           <div className="mb-16">
             <p className="uppercase tracking-[4px] text-[#ff4f75] text-xs mb-3">Project</p>
-            <h1 className="text-5xl font-black tracking-[-2px]">Karya Terbaik</h1>
+            <h1 className="text-5xl font-black tracking-[-2px]">Karya Web Terbaik</h1>
           </div>
           <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-7">
             {listProyek.map((proyek, index) => {
@@ -413,10 +412,10 @@ function App() {
         {/* ARTIKEL & INSIGHT */}
         <section id="artikel" className="pb-32">
           <div className="mb-16">
-            <p className="uppercase tracking-[4px] text-[#10d9a0] text-xs mb-3">Insight & Studi Kasus</p>
-            <h1 className="text-5xl font-black tracking-[-2px]">Artikel & Cerita Dari Lapangan</h1>
+            <p className="uppercase tracking-[4px] text-[#10d9a0] text-xs mb-3">Insight & Web Case Study</p>
+            <h1 className="text-5xl font-black tracking-[-2px]">Artikel & Cerita Pembuatan Web</h1>
             <p className="text-white/50 text-sm mt-4 max-w-xl leading-7">
-              Hal-hal yang gw pelajari sambil ngerjain puluhan proyek — biar lo tahu apa yang bakal lo dapet kalau kerja sama gw.
+              Pengalaman teknis seputar pembuatan website, optimasi database, dan desain UI modern.
             </p>
           </div>
           <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-7">
@@ -458,8 +457,8 @@ function App() {
         <section id="kontak" className="py-20">
           <div className="mb-12 text-center">
             <p className="uppercase tracking-widest text-[#10d9a0] text-xs mb-2">// kontak</p>
-            <h2 className="text-4xl font-bold tracking-tight">Yuk Ngobrol</h2>
-            <p className="text-white/50 text-sm mt-2">Ada ide keren? Atau proyek yang butuh sentuhan gw? Gas!</p>
+            <h2 className="text-4xl font-bold tracking-tight">Konsultasi Project Web</h2>
+            <p className="text-white/50 text-sm mt-2">Punya kebutuhan website tugas atau bisnis? Langsung kirim pesan!</p>
           </div>
           <div className="max-w-[600px] mx-auto bg-black/50 backdrop-blur-sm border border-white/5 rounded-2xl p-9 relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-[radial-gradient(ellipse_at_top_left,rgba(16,217,160,0.08)_0%,transparent_55%)] before:pointer-events-none">
             <form action="https://formsubmit.co/ppatih99@gmail.com" method="POST" autoComplete="off" className="relative z-10">
@@ -486,12 +485,12 @@ function App() {
                 </div>
               </div>
               <div className="flex flex-col gap-2 mb-5">
-                <label className="text-[10px] uppercase tracking-wider text-white/50 font-mono">Pesan</label>
+                <label className="text-[10px] uppercase tracking-wider text-white/50 font-mono">Pesan / Brief Web</label>
                 <textarea
                   name="pesan"
                   rows="4"
                   className="bg-black/40 border border-white/10 rounded-lg p-3 text-sm text-white outline-none resize-none focus:border-[#10d9a0] focus:shadow-[0_0_0_3px_rgba(16,217,160,0.12)] transition duration-200"
-                  placeholder="Ceritain proyekmu..."
+                  placeholder="Jelaskan kebutuhan websitemu..."
                   required
                 ></textarea>
               </div>
@@ -521,7 +520,7 @@ function App() {
             </button>
 
             <p className="text-[10px] uppercase tracking-widest text-[#10d9a0] font-mono mb-1">
-              Informasi Pembayaran
+              Informasi Pembayaran Web
             </p>
             <h3 className="text-2xl font-black mb-1">{selectedPaket.nama}</h3>
             <p className="text-[#10d9a0] font-black text-xl mb-6">Rp {selectedPaket.harga}</p>
@@ -535,7 +534,7 @@ function App() {
               <div className="text-xs text-white/60 uppercase font-mono mb-1">Nomor Rekening</div>
               <div className="flex items-center justify-between bg-white/5 rounded-xl p-3 border border-white/5">
                 <span className="font-mono text-lg font-bold text-[#10d9a0] tracking-wider">
-                  0324 0105 2313 508
+                  0324 0152 3135 08
                 </span>
                 <button
                   onClick={handleCopyRekening}
