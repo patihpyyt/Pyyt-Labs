@@ -182,7 +182,7 @@ export const listProyek = [
     nama: "Sistem monitoring Bantuan Sosial",
     desk: "Aplikasi untuk petugas desa mendata warga penerima bansos (PKH, BLT, BPNT), status penyaluran, dan laporan per periode. Warga bisa cek status bantuan mereka via web.",
     tools: ["HTML", "Talwind CSS", "Javascript", "Laravel"],
-    link: "bansos.nlabs.id",
+    link: "https://bansos.nlabs.id",
     dad: "600",
   },
   {
